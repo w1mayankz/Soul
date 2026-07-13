@@ -3,7 +3,7 @@ name: Build Flutter APK
 on:
   push:
     branches:
-      - main # (Change to 'master' if your default branch is named master)
+      - main 
 
 jobs:
   build:
@@ -24,6 +24,9 @@ jobs:
         with:
           flutter-version: '3.22.0' 
           channel: 'stable'
+
+      - name: Generate Platform Files
+        run: flutter create .
 
       - name: Install Dependencies
         run: flutter pub get
