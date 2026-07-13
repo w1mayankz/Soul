@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTypography {
-  static const String _fontFamily = 'Inter';
-
   // Calculates the -4% tracking natively
   static double _tracking(double fontSize) => fontSize * -0.04;
 
@@ -11,8 +10,8 @@ class AppTypography {
     FontWeight weight = FontWeight.normal,
     Color color = CupertinoColors.white,
   }) {
-    return TextStyle(
-      fontFamily: _fontFamily,
+    // Dynamically pulls the Inter font and applies it
+    return GoogleFonts.inter(
       fontSize: fontSize,
       fontWeight: weight,
       color: color,
