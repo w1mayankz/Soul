@@ -26,7 +26,7 @@ jobs:
           channel: 'stable'
 
       - name: Generate Platform Files
-        run: flutter create .
+        run: flutter create --project-name soul .
 
       - name: Install Dependencies
         run: flutter pub get
